@@ -1,0 +1,8 @@
+@import "./variables";
+@import "~angular-material/layouts/angular-material.layouts";
+
+.divider {
+  width: $layout-gutter-width;
+  height: $layout-gutter-width;
+}
+

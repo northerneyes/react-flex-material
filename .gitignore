@@ -1,0 +1,17 @@
+*.sublime-workspace
+*.sublime-project
+*.orig
+*.log
+*.tgz
+.DS_Store
+.idea
+.coverage
+build
+coverage
+playground.js
+dist
+lib
+node_modules
+modules
+npm-debug.log
+errorShots

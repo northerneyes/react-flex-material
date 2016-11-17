@@ -1,0 +1,10 @@
+@import "./variables";
+
+.root {
+  padding-right: $layout-gutter-width;
+  padding-left: $layout-gutter-width;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1440px;
+  width: 100%;
+}

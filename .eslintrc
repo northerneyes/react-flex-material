@@ -1,0 +1,67 @@
+{
+  "extends": "airbnb",
+  "parser": "babel-eslint",
+  "rules": {
+    "max-len": 0,
+    "arrow-body-style": 0,
+    "no-nested-ternary": 0,
+    "global-require": 0,
+    "no-underscore-dangle": 0, // because of '__Rewire__' for example
+    "consistent-return": 0, // Strange rule. Sometimes hard to follow. Probably we will bring it back in future.
+    "no-param-reassign": [2, { "props": false }], // because we often convert array to objects with reduce
+    "comma-dangle": [2, "never"],
+    "new-cap": [2, {"capIsNew": false}], // because we have Immutable()
+    "curly": [2, "multi-line"],
+    "indent": [2, 2, {"SwitchCase": 1}],
+    "eqeqeq": [2, "smart"],
+    "object-curly-spacing": [2, "never"],
+    "space-before-function-paren": [2, "never"],
+    "arrow-parens": ["error", "as-needed"],
+    "no-mixed-operators": 0,
+    "object-property-newline": 0,
+    "no-restricted-properties": ["error", {
+      "object": "arguments",
+      "property": "callee",
+      "message": "arguments.callee is deprecated",
+    }, {
+      "property": "__defineGetter__",
+      "message": "Please use Object.defineProperty instead.",
+    }, {
+      "property": "__defineSetter__",
+      "message": "Please use Object.defineProperty instead.",
+    }], // redefine this rule, because airbnb force to use exponentiation-operator (**), but it doesn't support by node and requires the whole plugin, we use it only in one single place `babel-plugin-transform-exponentiation-operator`
+
+    "import/prefer-default-export": 0, // we are using a lot of utils/actions with only one methoud and should be without default
+    "import/no-named-as-default": 0,
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": true}],
+    "import/first": 0, // useful, but we use css modules and messages first
+
+    "react/jsx-indent": 0, // untill rule becomes more flexible https://github.com/yannickcr/eslint-plugin-react/issues/540
+    "react/jsx-space-before-closing": 0,
+    "react/prefer-stateless-function": 0,
+    "react/jsx-closing-bracket-location": [2, {
+      "nonEmpty": "after-props",
+      "selfClosing": "tag-aligned"
+    }],
+    "react/no-unused-prop-types": 0, // sometimes we do not use prop, but it should be defined for React validation/nextProps/prevProps, need to investigate
+    "react/jsx-filename-extension": [0, { "extensions": [".js", ".jsx"] }],
+    "react/forbid-prop-types": 0, // maybe useful (by default `object`, `array`)
+    "react/no-find-dom-node": 0, // we are using a lot for react-widgets, https://github.com/yannickcr/eslint-plugin-react/issues/678
+    "react/style-prop-object": 0, // conficts with FormattedNumber and style prop
+    "react/no-danger": 0,
+
+    "jsx-a11y/no-static-element-interactions": 0,
+    "jsx-a11y/label-has-for": 0
+  },
+  "globals": {
+    "after": false,
+    "afterEach": false,
+    "before": false,
+    "beforeEach": false,
+    "describe": false,
+    "it": false,
+    "require": false,
+    "process": false,
+    "browser": false
+  }
+}
