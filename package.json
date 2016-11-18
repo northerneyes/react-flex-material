@@ -1,7 +1,7 @@
 {
   "name": "react-flex-material",
   "version": "1.0.0",
-  "description": "React Wrapper for Angular Material Flex Layout",
+  "description": "Flex component built for React based on Angular Material Flex Layout",
   "files": [
     "modules",
     "lib"
@@ -26,8 +26,8 @@
     "react flex"
   ],
   "authors": [
-    "smashercosmo (https://github.com/smashercosmo)",
-    "George Bukhanov (https://github.com/northerneyes)"
+    "George Bukhanov (https://github.com/northerneyes)",
+    "smashercosmo (https://github.com/smashercosmo)"
   ],
   "license": "MIT",
   "bugs": {

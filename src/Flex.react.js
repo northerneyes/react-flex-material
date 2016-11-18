@@ -124,7 +124,7 @@ export default class Flex extends Component {
       .join(' ');
 
     const FlexComponent = tag || 'div';
-    // remove Unknown Prop Warning for >react-5.2 https://facebook.github.io/react/warnings/unknown-prop.html
+    // remove Unknown Prop Warning for > react-5.2 https://facebook.github.io/react/warnings/unknown-prop.html
     const cleanProps = omit(rest, allFlexAttributes);
 
     return (
