@@ -56,10 +56,8 @@
     "eslint-plugin-jsx-a11y": "^2.2.3",
     "eslint-plugin-react": "^6.6.0",
     "react": "^15.3.2",
-    "react-pure-render": "^1.0.2",
     "webpack": "^1.13.3",
     "lodash": "^4.11.1",
-    "classnames": "^2.2.5",
     "extract-text-webpack-plugin": "^1.0.1",
     "style-loader": "^0.13.1",
     "sass-loader": "^4.0.2",
@@ -69,7 +67,6 @@
     "angular-animate": "^1.5.8",
     "angular-aria": "^1.5.8",
     "angular-material": "^1.1.1",
-    "classnames": "^2.2.5",
     "postcss": "^5.0.19",
     "postcss-loader": "^0.8.2"
   },

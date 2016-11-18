@@ -3,8 +3,6 @@ import styles from './Flex.scss';
 import React from 'react';
 import {flatten, omit, values} from 'lodash';
 
-import Component from './Component.react';
-
 const responsiveModifiers = ['', 'Xs', 'GtXs', 'Sm', 'GtSm', 'Md', 'GtMd', 'Lg', 'GtLg'];
 
 const baseAttributes = ['layout', 'flex', 'order', 'offset', 'align', 'hide', 'show'];
@@ -89,7 +87,7 @@ const attributesToClasses = (attributes, props, prefix = '') => {
     .map(attrName => styles[attributeToClass(attrName, props[attrName], prefix)]);
 };
 
-export default class Flex extends Component {
+export default class Flex extends React.Component {
   // TODO generate propTypes for attributes
 
   static propTypes = {

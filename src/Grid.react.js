@@ -1,11 +1,8 @@
 import styles from './Grid.scss';
 
 import React from 'react';
-import classNames from 'classnames';
 
-import Component from './Component.react';
-
-export default class Grid extends Component {
+export default class Grid extends React.Component {
   static propTypes = {
     /** Custom class name */
     className: React.PropTypes.string,
@@ -18,7 +15,7 @@ export default class Grid extends Component {
 
   render() {
     const {className, ...props} = this.props;
-    const classes = classNames(styles.root, className);
+    const classes = `${styles.root} ${className}`;
 
     return (
       <div className={classes} {...props}>
