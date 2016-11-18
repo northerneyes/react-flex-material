@@ -160,6 +160,7 @@ For row layout, attribute value could be omitted
 
 ### Special attribute for `Flex` called `divider`.
 <img width="826" alt="screenshot" src="https://cloud.githubusercontent.com/assets/1038904/20428264/bd4727a8-ad90-11e6-9bb0-84fa3088afe4.png">
+
 If you want to add some space between components.
 ```jsx
 <Flex layout align="space-between center">
