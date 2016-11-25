@@ -62,18 +62,6 @@ And then load them separately
 <link rel="stylesheet" href="node_modules/react-flex-material/lib/flex.css">
 ```
 
-### Some Advise
-react-flex-material is using [lodash](https://lodash.com/). To minimize size of the bundle, add [babel-plugin-lodash](https://github.com/lodash/babel-plugin-lodash) to your webpack configuration.
-```js
-{
-  test: /\.js$/,
-  loader: 'babel',
-  query: {
-    plugins: ['lodash']
-  }
-}
-```
-
 ## Documentation
 The library is based on [Angular Material Flex Layout](https://material.angularjs.org/latest/layout/introduction). So you can use their documentation as a main source.
 
