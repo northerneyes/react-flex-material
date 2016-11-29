@@ -1,7 +1,6 @@
 import styles from './Flex.scss';
 
 import React from 'react';
-import {flatten, omit, values} from 'lodash';
 
 const responsiveModifiers = ['', 'Xs', 'GtXs', 'Sm', 'GtSm', 'Md', 'GtMd', 'Lg', 'GtLg'];
 
@@ -24,7 +23,29 @@ const responsiveAttributes = baseAttributes.reduce((result, attrName) => {
   return result;
 }, {});
 
-const allFlexAttributes = flatten(values(responsiveAttributes)).concat(otherFlexAttributes).concat(['divider', 'wrap', 'tag']);
+/**
+ * Creates an array out of object values.
+ * If values are arrays, they will be flattened.
+ *
+ * @param {Object} obj
+ * @return {Array}
+ */
+const objectValuesToArray = obj => [].concat.apply([], Object.keys(obj).map(key => obj[key]));
+
+/**
+ * Creates new object out of provided
+ * object without particular props
+ *
+ * @param {Object} obj
+ * @param {Array} props - properties to exclude
+ * @return {Object}
+ */
+const omit = (obj, props) => Object.keys(obj).reduce((result, key) => {
+  if (props.indexOf(key) === -1) {
+    result[key] = obj[key];
+  }
+  return result;
+}, {});
 
 /**
  * Converts camelCased string to snake-cased string.
@@ -87,6 +108,9 @@ const attributesToClasses = (attributes, props, prefix = '') => {
     .map(attrName => styles[attributeToClass(attrName, props[attrName], prefix)]);
 };
 
+const allFlexAttributes = objectValuesToArray(responsiveAttributes)
+  .concat(otherFlexAttributes, ['divider', 'wrap', 'tag']);
+
 export default class Flex extends React.Component {
   // TODO generate propTypes for attributes
 
@@ -98,7 +122,6 @@ export default class Flex extends React.Component {
     tag: React.PropTypes.node,
     children: React.PropTypes.node
   };
-
 
   render() {
     const {className, tag, ...rest} = this.props;
@@ -122,6 +145,7 @@ export default class Flex extends React.Component {
       .join(' ');
 
     const FlexComponent = tag || 'div';
+
     // remove Unknown Prop Warning for > react-5.2 https://facebook.github.io/react/warnings/unknown-prop.html
     const cleanProps = omit(rest, allFlexAttributes);
 
