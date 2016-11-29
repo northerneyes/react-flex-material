@@ -1,6 +1,6 @@
 {
   "name": "react-flex-material",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Flex component built for React based on Angular Material Flex Layout",
   "files": [
     "modules",
