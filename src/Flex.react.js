@@ -1,6 +1,6 @@
 import styles from './Flex.scss';
 
-import React from 'react';
+import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 
 const responsiveModifiers = ['', 'Xs', 'GtXs', 'Sm', 'GtSm', 'Md', 'GtMd', 'Lg', 'GtLg'];
@@ -112,7 +112,7 @@ const attributesToClasses = (attributes, props, prefix = '') => {
 const allFlexAttributes = objectValuesToArray(responsiveAttributes)
   .concat(otherFlexAttributes, ['divider', 'wrap', 'tag']);
 
-export default class Flex extends React.Component {
+export default class Flex extends Component {
   // TODO generate propTypes for attributes
 
   static propTypes = {

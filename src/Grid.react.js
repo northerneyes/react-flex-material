@@ -7,11 +7,11 @@ import PropTypes from 'prop-types';
 export default class Grid extends Component {
   static propTypes = {
     /** Custom class name */
-    className: React.PropTypes.string,
-    style: React.PropTypes.object,
-    children: React.PropTypes.oneOfType([
-      React.PropTypes.arrayOf(React.PropTypes.node),
-      React.PropTypes.node
+    className: PropTypes.string,
+    style: PropTypes.object,
+    children: PropTypes.oneOfType([
+      PropTypes.arrayOf(PropTypes.node),
+      PropTypes.node
     ])
   };
 
