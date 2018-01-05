@@ -1,6 +1,7 @@
 import styles from './Flex.scss';
 
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const responsiveModifiers = ['', 'Xs', 'GtXs', 'Sm', 'GtSm', 'Md', 'GtMd', 'Lg', 'GtLg'];
 
@@ -115,12 +116,12 @@ export default class Flex extends React.Component {
   // TODO generate propTypes for attributes
 
   static propTypes = {
-    divider: React.PropTypes.bool,
-    wrap: React.PropTypes.bool,
+    divider: PropTypes.bool,
+    wrap: PropTypes.bool,
     /** Custom class name */
-    className: React.PropTypes.string,
-    tag: React.PropTypes.node,
-    children: React.PropTypes.node
+    className: PropTypes.string,
+    tag: PropTypes.node,
+    children: PropTypes.node
   };
 
   render() {
