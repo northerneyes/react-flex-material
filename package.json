@@ -1,6 +1,6 @@
 {
   "name": "react-flex-material",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "Flex component built for React based on Angular Material Flex Layout",
   "files": [
     "modules",
@@ -35,7 +35,7 @@
   },
   "homepage": "https://github.com/northerneyes/react-flex-material#readme",
   "peerDependencies": {
-    "react": "^0.14.0 || ^15.0.0"
+    "react": "^0.15.0 || ^16.2.0"
   },
   "devDependencies": {
     "autoprefixer": "^6.5.2",
@@ -74,6 +74,7 @@
     "angular": "^1.5.8",
     "angular-animate": "^1.5.8",
     "angular-aria": "^1.5.8",
-    "angular-material": "^1.1.1"
+    "angular-material": "^1.1.1",
+    "prop-types": "^15.6.0"
   }
 }
